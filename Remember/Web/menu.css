@@ -1,0 +1,75 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    height: 50px;
+    border: 2px solid lightgreen;
+}
+
+.main-header {
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    height: 100%;
+}
+
+.main-menu {
+    position: fixed;
+    left: 0%;
+    top: 50px;
+    width: 20%;
+    height: 100%;
+    padding-top: 90px;
+    background-color: rgba(0, 210, 150, 0.7);
+    transform: translateX(-100%);
+    transition: 0.6s ease-in-out;
+}
+
+.main-menu-item {
+    display: block;
+    margin: 10px;
+    background-color: lightsteelblue;
+}
+
+#main-menu-check {
+    position: fixed;
+    left: -1000px;
+    top: 20px;
+}
+
+#main-menu-check:checked ~ .main-menu {
+    /* #main-menu-check:checked 체크되었을 때 main-menu클래스 까지 */
+    background-color: rgba(210, 0, 0, 0.5);
+    transform: translateX(0);
+}
+
+label[for='main-menu-check'] {  /* 라벨 선택 시 체크박스와 동일하게 */
+    position: fixed;
+    left: 40px;
+    top: 20px;
+    z-index: 1;
+}
+
+.div-body {
+    height: 50%;
+    background-color: lightyellow;
+}
+
+.text-p {
+    border: 1px solid lightsteelblue;
+    border-radius: 10px;
+}
+
+.foo {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lightcoral;
+}
+
